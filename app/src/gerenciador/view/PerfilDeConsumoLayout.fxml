@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.collections.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane id="AnchorPane" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.PerfilDeConsumoController">
+    <children>
+        <VBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="25.0">
+            <children>
+                <VBox alignment="CENTER_LEFT">
+                    <children>
+                        <Label text="Filtrar Movimentações">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font></Label>
+                        <HBox alignment="CENTER_LEFT" spacing="25.0">
+                            <VBox.margin>
+                                <Insets />
+                            </VBox.margin>
+                            <padding>
+                                <Insets left="25.0" />
+                            </padding>
+                            <children>
+                                <Label text="Tipo" />
+                                <ChoiceBox fx:id="choiceTipo" onAction="#atualizaCategoria" prefWidth="150.0" value="Selecione">
+                                    <items>
+                                        <FXCollections fx:factory="observableArrayList">
+                                            <String fx:value="Selecione" />
+                                            <String fx:value="Despesa" />
+                                            <String fx:value="Receita" />
+                                        </FXCollections>
+                                    </items>
+                                </ChoiceBox>
+                                <Label text="Categoria" />
+                                <ChoiceBox fx:id="choiceCategoria" prefWidth="150.0" />
+                                <VBox spacing="10.0">
+                                    <children>
+                                        <Label text="Período:" />
+                                        <HBox spacing="10.0">
+                                            <children>
+                                                <Label text="De " />
+                                                <DatePicker fx:id="datePickerDe" />
+                                            </children>
+                                        </HBox>
+                                        <HBox spacing="10.0">
+                                            <children>
+                                                <Label text="Até" />
+                                                <DatePicker fx:id="datePickerAte" />
+                                            </children>
+                                        </HBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+                        <HBox alignment="CENTER_RIGHT" prefWidth="200.0">
+                            <children>
+                                <Button fx:id="btnFiltrar" mnemonicParsing="false" onAction="#filtrarTabela" prefWidth="90.0" styleClass="action-btn" text="Filtrar" />
+                            </children>
+                            <padding>
+                                <Insets top="10.0" />
+                            </padding>
+                        </HBox>
+                    </children>
+                </VBox>
+                <BarChart fx:id="barchartPerfilDeConsumo" prefHeight="300.0" prefWidth="350.0">
+                    <xAxis>
+                        <CategoryAxis side="BOTTOM" fx:id="xAxis" />
+                    </xAxis>
+                    <yAxis>
+                        <NumberAxis fx:id="yAxis" side="LEFT" />
+                    </yAxis>
+                </BarChart>
+                <TableView fx:id="tabelaPerfilDeConsumo">
+                    <columns>
+                        <TableColumn fx:id="colunaCategoriaPerfil" editable="false" minWidth="150.0" prefWidth="-1.0" resizable="false" sortable="false" text="Categoria" />
+                        <TableColumn fx:id="colunaValorPerfil" editable="false" minWidth="150.0" prefWidth="-1.0" resizable="false" sortable="false" text="Valor" />
+                        <TableColumn fx:id="colunaPorcentagemPerfil" editable="false" minWidth="150.0" prefWidth="-1.0" resizable="false" sortable="false" text="Porcentagem" />
+                    </columns>
+                </TableView>
+            </children>
+        </VBox> 
+    </children>
+</AnchorPane>

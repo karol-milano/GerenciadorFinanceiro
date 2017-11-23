@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.chart.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.collections.*?>
+
+<AnchorPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.SituacaoFinanceiraController">
+    <children>
+        <GridPane alignment="CENTER" layoutX="96.0" layoutY="65.0">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <Label alignment="CENTER" text="Total Receita">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Total Despesa" GridPane.columnIndex="2">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="Resultado" GridPane.columnIndex="4">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label text="-" GridPane.columnIndex="1" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="50.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="totalreceita" GridPane.rowIndex="1" />
+                <Label text="=" GridPane.columnIndex="3" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="50.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="totaldespesa" GridPane.columnIndex="2" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+                <Label fx:id="receitadespesa" GridPane.columnIndex="4" GridPane.rowIndex="1">
+                    <GridPane.margin>
+                        <Insets left="10.0" />
+                    </GridPane.margin>
+                </Label>
+            </children>
+            <padding>
+                <Insets left="10.0" />
+            </padding>
+        </GridPane>
+        <ChoiceBox fx:id="choiceMes" layoutX="749.0" onAction="#atualizaDadosMes" layoutY="83.0" prefWidth="150.0" >
+            <items>
+                <FXCollections fx:factory="observableArrayList">
+                    <String fx:value="Janeiro" />
+                    <String fx:value="Feveiro" />
+                    <String fx:value="Março" />
+                    <String fx:value="Abril" />
+                    <String fx:value="Maio" />
+                    <String fx:value="Junho" />
+                    <String fx:value="Julho" />
+                    <String fx:value="Agosto" />
+                    <String fx:value="Setembro" />
+                    <String fx:value="Outubro" />
+                    <String fx:value="Novembro" />
+                    <String fx:value="Dezembro" />
+                </FXCollections>
+            </items>
+        </ChoiceBox>
+        <TableView fx:id="tableMovimentacao" layoutX="13.0" layoutY="187.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+            <columns>
+                <TableColumn fx:id="colunatipo" editable="false" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Tipo" />
+                <TableColumn fx:id="colunaData" editable="false" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Data" />
+                <TableColumn fx:id="colunaCategoria" editable="false" minWidth="200.0" prefWidth="-1.0" resizable="false" sortable="false" text="Categoria" />
+                <TableColumn fx:id="colunaGrupo" editable="false" minWidth="200.0" prefWidth="-1.0" resizable="false" sortable="false" text="Grupo" />
+                <TableColumn fx:id="colunaDescricao" editable="false" minWidth="300.0" prefWidth="-1.0" resizable="false" sortable="false" text="Descrição" />
+                <TableColumn fx:id="colunaValor" editable="false" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Valor" />
+            </columns>
+        </TableView>
+    </children>
+</AnchorPane>

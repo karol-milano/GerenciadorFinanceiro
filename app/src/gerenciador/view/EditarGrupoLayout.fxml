@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.EditarGrupoController">
+   <children>
+      <Label layoutX="25.0" layoutY="14.0" text="Informe os dados do grupo" AnchorPane.topAnchor="10.0">
+         <font>
+            <Font name="System Bold" size="24.0" />
+         </font>
+      </Label>
+      <GridPane layoutX="25.0" layoutY="98.0" prefHeight="210.0" prefWidth="533.0" AnchorPane.leftAnchor="25.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Label text="Descrição" />
+            <TextField fx:id="txtDescricaoGrupo" prefWidth="250.0" GridPane.columnIndex="1" />
+            <Label text="Categoria" GridPane.rowIndex="1" />
+            <ChoiceBox fx:id="choiceCategoria" prefWidth="250.0" value="Selecione" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+         </children>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="256.0" minWidth="10.0" prefWidth="135.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="397.0" minWidth="10.0" prefWidth="386.0" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+         </rowConstraints>
+      </GridPane>
+      <HBox layoutX="360.0" layoutY="300.0" spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#salvarGrupo" prefWidth="90.0" text="Salvar">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="primary" />
+               </styleClass>
+            </Button>
+            <Button mnemonicParsing="false" onAction="#cancelarGrupo" prefWidth="90.0" text="Cancelar">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="danger" />
+               </styleClass>
+            </Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.net.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane prefWidth="700.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.LoginController">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="34.0" layoutY="70.0" spacing="30.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label text="Entrar no sistema">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <HBox spacing="50.0">
+               <children>
+                  <Label text="Usuario" />
+                  <TextField fx:id="txtUsuario" />
+               </children>
+            </HBox>
+            <HBox spacing="60.0">
+               <children>
+                  <Label text="Senha" />
+                  <PasswordField fx:id="txtSenha" />
+               </children>
+            </HBox>
+            <Label fx:id="labelError" prefHeight="20.0" prefWidth="150.0" textFill="RED" />
+            <Button id="btnEntrar" fx:id="btnEntrar" mnemonicParsing="false" onAction="#acaoEntrar" prefWidth="90.0" text="Entrar">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="primary" />
+               </styleClass></Button>
+         </children>
+      </VBox>
+      <Separator layoutX="305.0" layoutY="-1.0" orientation="VERTICAL" prefHeight="400.0" prefWidth="6.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="340.0" AnchorPane.topAnchor="0.0" />
+      <VBox alignment="TOP_RIGHT" layoutX="364.0" layoutY="78.0" spacing="25.0" AnchorPane.topAnchor="70.0">
+         <children>
+            <Label prefHeight="53.0" prefWidth="243.0" text="Fazer cadastro">
+               <font>
+                  <Font size="36.0" />
+               </font>
+            </Label>
+            <HBox spacing="60.0">
+               <children>
+                  <Label text="Nome" />
+                  <TextField fx:id="txtCadastrarNome" />
+               </children>
+            </HBox>
+            <HBox spacing="50.0">
+               <children>
+                  <Label text="Usuário" />
+                  <TextField fx:id="txtCadastrarUsuario" />
+               </children>
+            </HBox>
+            <HBox spacing="60.0">
+               <children>
+                  <Label text="Senha" />
+                  <PasswordField fx:id="txtCadastrarSenha" />
+               </children>
+            </HBox>
+            <Button fx:id="btnCadastrar" mnemonicParsing="false" onAction="#acaoCadastrar" prefWidth="90.0" text="Cadastrar">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="danger" />
+               </styleClass></Button>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

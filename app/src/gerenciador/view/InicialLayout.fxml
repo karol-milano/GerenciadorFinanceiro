@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<BorderPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.InicialController">
+    <center>
+        <TabPane fx:id="tabPane" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+            <tabs>
+                <Tab fx:id="tabSituacaoFinanceira" closable="false" text="Situação Financeira">
+                    <content>
+                        <fx:include fx:id="situacaoFinanceira" source="SituacaoFinanceiraLayout.fxml" />
+                    </content>                
+                </Tab>
+                <Tab fx:id="tabPerfilDeConsumo" closable="false" text="Perfil de Consumo">
+                    <content>
+                        <fx:include fx:id="perfilDeConsumo" source="PerfilDeConsumoLayout.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="tabMovimentacoes" closable="false" text="Movimentações">
+                    <content>
+                        <fx:include fx:id="listarMovimentacao" source="ListarMovimentacaoLayout.fxml" />
+                    </content>
+                </Tab>
+                <Tab fx:id="tabCategorias" closable="false" text="Categorias/Grupos">
+                    <content>
+                        <fx:include fx:id="listarCategoriaGrupo" source="ListarCategoriaGrupoLayout.fxml" />
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </center>
+   <top>
+      <AnchorPane BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="txtBemVindo" layoutX="14.0" layoutY="14.0" text="Bem vindo," AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="10.0">
+               <font>
+                  <Font size="24.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>

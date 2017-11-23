@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.ListarCategoriaGrupoController">
+   <children>
+      <HBox alignment="CENTER" layoutX="25.0" layoutY="48.0" spacing="30.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="10.0">
+         <children>
+            <VBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Label text="Categoria">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="tabelaCategoria" prefHeight="300.0" prefWidth="250.0" />
+                  <HBox spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cadastrarCategoria" prefWidth="90.0" text="Cadastrar">
+                           <styleClass>
+                              <String fx:value="primary" />
+                              <String fx:value="action-btn" />
+                           </styleClass></Button>
+                        <Button mnemonicParsing="false" onAction="#editarCategoria" prefWidth="90.0" text="Editar">
+                           <styleClass>
+                              <String fx:value="action-btn" />
+                              <String fx:value="default" />
+                           </styleClass></Button>
+                        <Button mnemonicParsing="false" onAction="#deletarCategoria" prefWidth="90.0" text="Deletar">
+                           <styleClass>
+                              <String fx:value="danger" />
+                              <String fx:value="action-btn" />
+                           </styleClass></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <Separator maxHeight="1.7976931348623157E308" minHeight="-Infinity" orientation="VERTICAL" />
+            <VBox alignment="CENTER" spacing="20.0">
+               <children>
+                  <Label alignment="CENTER" contentDisplay="CENTER" text="Grupo">
+                     <font>
+                        <Font name="System Bold" size="24.0" />
+                     </font>
+                  </Label>
+                  <ListView fx:id="tabelaGrupo" prefHeight="300.0" prefWidth="250.0" />
+                  <HBox spacing="15.0">
+                     <children>
+                        <Button mnemonicParsing="false" onAction="#cadastrarGrupo" prefWidth="90.0" text="Cadastrar">
+                           <styleClass>
+                              <String fx:value="action-btn" />
+                              <String fx:value="primary" />
+                           </styleClass></Button>
+                        <Button mnemonicParsing="false" onAction="#editarGrupo" prefWidth="90.0" text="Editar">
+                           <styleClass>
+                              <String fx:value="action-btn" />
+                              <String fx:value="default" />
+                           </styleClass></Button>
+                        <Button mnemonicParsing="false" onAction="#deletarGrupo" prefWidth="90.0" text="Deletar">
+                           <styleClass>
+                              <String fx:value="action-btn" />
+                              <String fx:value="danger" />
+                           </styleClass></Button>
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

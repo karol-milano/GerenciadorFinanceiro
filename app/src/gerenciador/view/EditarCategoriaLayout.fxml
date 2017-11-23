@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.EditarCategoriaController">
+   <children>
+      <VBox spacing="50.0" AnchorPane.bottomAnchor="10.0" AnchorPane.leftAnchor="20.0" AnchorPane.rightAnchor="20.0" AnchorPane.topAnchor="20.0">
+         <children>
+            <Label text="Informe os dados da Categoria">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox>
+               <children>
+                  <RadioButton fx:id="checDespesa" mnemonicParsing="false" prefHeight="17.0" prefWidth="104.0" selected="true" text="Despesa">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="receitaDespesa" />
+                     </toggleGroup>
+                  </RadioButton>
+                  <RadioButton fx:id="checReceita" layoutX="109.0" layoutY="46.0" mnemonicParsing="false" text="Receita" toggleGroup="$receitaDespesa" />
+               </children>
+            </HBox>
+            <HBox alignment="CENTER_LEFT" spacing="30.0">
+               <children>
+                  <Label text="Descrição" />
+                  <TextField fx:id="txtDescricaoCategoria" prefWidth="250.0" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <HBox spacing="20.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="40.0">
+         <children>
+            <Button mnemonicParsing="false" onAction="#salvarCategoria" prefWidth="90.0" text="Salvar">
+               <styleClass>
+                  <String fx:value="primary" />
+                  <String fx:value="action-btn" />
+               </styleClass></Button>
+            <Button mnemonicParsing="false" onAction="#cancelarCategoria" prefWidth="90.0" text="Cancelar">
+               <styleClass>
+                  <String fx:value="danger" />
+                  <String fx:value="action-btn" />
+               </styleClass></Button>
+         </children>
+      </HBox>
+   </children>
+</AnchorPane>

@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="gerenciador.controller.ListarMovimentacaoController">
+    <children>
+        <HBox layoutX="22.0" layoutY="-1.0" spacing="15.0" AnchorPane.leftAnchor="25.0" AnchorPane.topAnchor="25.0">
+            <children>
+            <Label text="Tipo de movimentação">
+               <font>
+                  <Font name="System Bold" size="12.0" />
+               </font>
+            </Label>
+                <RadioButton mnemonicParsing="false" onAction="#recarregarTabelaMvt" selected="true" text="Despesa">
+                    <toggleGroup>
+                        <ToggleGroup fx:id="DespesaReceitaTG" />
+                    </toggleGroup>
+                </RadioButton>
+                <RadioButton mnemonicParsing="false" onAction="#recarregarTabelaMvt" text="Receita" toggleGroup="$DespesaReceitaTG" />
+            </children>
+        </HBox>
+        <TableView fx:id="tabelaMvt" layoutX="14.0" layoutY="69.0" prefHeight="200.0" AnchorPane.bottomAnchor="70.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0" AnchorPane.topAnchor="70.0">
+            <columns>
+                <TableColumn fx:id="colunaDataMvt" editable="false" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Data" />
+                <TableColumn fx:id="colunaCategoriaMvt" editable="false" minWidth="150.0" prefWidth="-1.0" resizable="false" sortable="false" text="Categoria" />
+                <TableColumn fx:id="colunaGrupoMvt" editable="false" minWidth="150.0" prefWidth="-1.0" resizable="false" sortable="false" text="Grupo" />
+                <TableColumn fx:id="colunaDescricaoMvt" editable="false" minWidth="250.0" prefWidth="-1.0" resizable="false" sortable="false" text="Descrição" />
+                <TableColumn fx:id="colunaValorMvt" editable="false" minWidth="100.0" prefWidth="-1.0" resizable="false" sortable="false" text="Valor" />
+            </columns>
+        </TableView>
+        <HBox spacing="15.0" AnchorPane.bottomAnchor="20.0" AnchorPane.rightAnchor="10.0">
+            <children>
+                <Button mnemonicParsing="false" onAction="#cadastrarMvt" prefWidth="90.0" text="Cadastrar">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="primary" />
+               </styleClass></Button>
+                <Button mnemonicParsing="false" onAction="#editarMvt" prefWidth="90.0" styleClass="action-btn" text="Editar" />
+                <Button mnemonicParsing="false" onAction="#excluirMvt" prefWidth="90.0" text="Excluir">
+               <styleClass>
+                  <String fx:value="action-btn" />
+                  <String fx:value="danger" />
+               </styleClass></Button>
+            </children>
+        </HBox>
+    </children>    
+    
+</AnchorPane>
